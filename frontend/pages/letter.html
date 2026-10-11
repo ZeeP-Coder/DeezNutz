@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Letter</title>
+    <meta
+      name="description"
+      content="A slow animated birthday letter reveal."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Baloo+2:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/letter.css" />
+  </head>
+  <body>
+    <div class="scene">
+      <div class="glow glow-one"></div>
+      <div class="glow glow-two"></div>
+      <div class="confetti-layer" aria-hidden="true">
+        <span class="confetti c1"></span>
+        <span class="confetti c2"></span>
+        <span class="confetti c3"></span>
+        <span class="confetti c4"></span>
+        <span class="confetti c5"></span>
+        <span class="confetti c6"></span>
+        <span class="confetti c7"></span>
+        <span class="confetti c8"></span>
+        <span class="confetti c9"></span>
+        <span class="confetti c10"></span>
+      </div>
+      <div class="balloon-row" aria-hidden="true">
+        <span class="balloon b1"></span>
+        <span class="balloon b2"></span>
+        <span class="balloon b3"></span>
+        <span class="balloon b4"></span>
+      </div>
+
+      <div class="envelope-stage" aria-live="polite">
+        <div class="envelope" id="envelope">
+          <div class="envelope-shadow"></div>
+          <div class="envelope-top"></div>
+          <div class="envelope-left"></div>
+          <div class="envelope-right"></div>
+          <div class="envelope-bottom"></div>
+          <div class="stamp">♡</div>
+
+          <div class="paper-letter" id="letter">
+            <div class="letter-inner">
+              <p class="letter-salutation">Dear you,</p>
+              <div class="letter-message">
+                <p class="letter-placeholder">Write your message here…</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../scripts/letter.js"></script>
+  </body>
+</html>
