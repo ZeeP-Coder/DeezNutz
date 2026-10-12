@@ -288,14 +288,14 @@ body {
   position: absolute;
   left: 50%;
   top: 0;
-  width: min(72vw, 480px);
-  height: min(72vw, 430px);
+  width: min(69vw, 450px);
+  height: min(72vw, 410px);
   min-height: 300px;
   max-height: 68vh;
   border: 1px solid rgba(59, 101, 151, 0.2);
-  border-radius: 12px;
-  background: var(--cream);
-  box-shadow: 0 22px 45px rgba(40, 83, 132, 0.24);
+  border-radius: 10px;
+  background: linear-gradient(145deg, #ffffff 0%, var(--cream) 100%);
+  box-shadow: 0 24px 48px rgba(40, 83, 132, 0.22), 0 3px 0 rgba(255, 255, 255, 0.9) inset;
   transform-origin: top center;
   transform: translate(-50%, 88px) scale(0.82, 0.16);
   transform-style: preserve-3d;
@@ -309,8 +309,21 @@ body {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.42;
-  background: repeating-linear-gradient(to bottom, transparent 0 31px, rgba(79, 141, 135, 0.13) 32px);
+  opacity: 0.34;
+  background: repeating-linear-gradient(to bottom, transparent 0 32px, rgba(79, 141, 156, 0.13) 33px);
+}
+
+.paper-letter::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 13%;
+  right: 13%;
+  height: 4px;
+  border-radius: 0 0 999px 999px;
+  background: linear-gradient(90deg, var(--blue-300), var(--blue-700), var(--blue-300));
+  opacity: 0.75;
+  z-index: 2;
 }
 
 .envelope.is-open .envelope-top {
@@ -327,7 +340,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 20px 26px 12px;
+  padding: 24px 28px 16px;
   opacity: 0;
 }
 
@@ -346,11 +359,11 @@ body {
 .letter-salutation {
   position: relative;
   z-index: 1;
-  margin: 7px 0 0;
+  margin: 5px 0 0;
   flex-shrink: 0;
   color: var(--blue-700);
   font-family: 'Great Vibes', cursive;
-  font-size: clamp(2.4rem, 4vw, 3.8rem);
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
   font-weight: 400;
   line-height: 1;
 }
@@ -358,11 +371,11 @@ body {
 .letter-message {
   position: relative;
   z-index: 1;
-  margin-top: 13px;
-  padding: 0 8px 8px;
+  margin-top: 16px;
+  padding: 0 10px 10px 2px;
   color: var(--ink);
-  font-size: 1.03rem;
-  line-height: 1.65;
+  font-size: 1rem;
+  line-height: 1.72;
   flex: 1;
   min-height: 0;
   overflow-y: auto;
@@ -388,7 +401,12 @@ body {
 }
 
 .letter-message p {
-  margin: 0 0 12px;
+  margin: 0 0 15px;
+}
+
+.letter-message strong {
+  color: var(--blue-700);
+  font-weight: 800;
 }
 
 .letter-placeholder {
@@ -423,7 +441,7 @@ body {
 .reset-button {
   position: absolute;
   left: 50%;
-  bottom: 2%;
+  top: calc(50% + 205px);
   border: 1px solid rgba(37, 94, 168, 0.22);
   border-radius: 999px;
   padding: 8px 16px;
@@ -530,13 +548,17 @@ body {
   }
 
   .paper-letter {
-    width: 78vw;
-    height: min(64vh, 430px);
+    width: 82vw;
+    height: min(64vh, 410px);
     min-height: 300px;
   }
 
+  .reset-button {
+    top: calc(50% + 250px);
+  }
+
   .letter-inner {
-    padding: 17px 18px 9px;
+    padding: 20px 20px 12px;
   }
 
   .letter-message {

@@ -3,9 +3,35 @@ const openHint = document.getElementById('openHint');
 const resetButton = document.getElementById('resetButton');
 let replayTimer;
 
+const playOpenSound = () => {
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContext) return;
+
+  const context = new AudioContext();
+  const gain = context.createGain();
+  const firstNote = context.createOscillator();
+  const secondNote = context.createOscillator();
+  const start = context.currentTime;
+
+  gain.gain.setValueAtTime(0.0001, start);
+  gain.gain.exponentialRampToValueAtTime(0.05, start + 0.03);
+  gain.gain.exponentialRampToValueAtTime(0.0001, start + 0.5);
+  firstNote.frequency.value = 392;
+  secondNote.frequency.value = 587.33;
+  firstNote.connect(gain);
+  secondNote.connect(gain);
+  gain.connect(context.destination);
+  firstNote.start(start);
+  secondNote.start(start + 0.12);
+  firstNote.stop(start + 0.24);
+  secondNote.stop(start + 0.5);
+  window.setTimeout(() => context.close(), 700);
+};
+
 const openEnvelope = () => {
   if (envelope.classList.contains('is-open')) return;
 
+  playOpenSound();
   envelope.classList.add('is-open');
   envelope.setAttribute('aria-expanded', 'true');
   openHint.setAttribute('aria-hidden', 'true');
