@@ -5,6 +5,7 @@ const beginReveal = () => {
   if (!envelopeCard) return;
 
   envelopeCard.classList.add('is-transitioning');
+  document.body.classList.add('is-leaving');
   clickMeButton.setAttribute('disabled', 'true');
 
   window.setTimeout(() => {

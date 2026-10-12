@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Surprise Login</title>
+    <meta name="description" content="Sign in to open a birthday surprise." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/login.css" />
+  </head>
+  <body>
+    <main class="login-page">
+      <section class="login-panel" aria-labelledby="loginTitle">
+        <h1 id="loginTitle">Login</h1>
+
+        <form class="login-form" action="/login" method="post">
+          <label for="username">Username</label>
+          <input
+            id="username"
+            name="username"
+            type="text"
+            autocomplete="username"
+            required
+            autofocus
+          />
+
+          <label for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            required
+          />
+
+          <p class="login-error" id="loginError" role="alert" hidden>
+            That login did not work. Try again.
+          </p>
+          <button type="submit">Login</button>
+        </form>
+      </section>
+    </main>
+    <script src="../scripts/login.js"></script>
+  </body>
+</html>

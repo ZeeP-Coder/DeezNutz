@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" href="../styles/letter.css" />
   </head>
-  <body>
+  <body class="page-enter">
     <div class="scene">
       <div class="glow glow-one"></div>
       <div class="glow glow-two"></div>
@@ -38,9 +38,11 @@
         <span class="balloon b3"></span>
         <span class="balloon b4"></span>
       </div>
+      <div class="cat cat-left" aria-hidden="true"><span>•ᴗ•</span></div>
+      <div class="cat cat-right" aria-hidden="true"><span>•ᴥ•</span></div>
 
       <div class="envelope-stage" aria-live="polite">
-        <div
+        <button
           class="envelope"
           id="envelope"
           role="button"
@@ -57,13 +59,20 @@
 
           <div class="paper-letter" id="letter">
             <div class="letter-inner">
-              <p class="letter-salutation">Dear you,</p>
+              <p class="letter-salutation">Dear Kyren,</p>
               <div class="letter-message">
-                <p class="letter-placeholder">Write your message here…</p>
+                <p><strong>Happy Birthday MY GOAT! 🎉</strong></p>
+                <p>I wanted to write you something real, because you deserve more than a quick “HBD” text.</p>
+                <p>Looking back, some of my favorite moments with you are the simple ones: movie nights, I love laughing with you during movies, even when it’s at the wrong moments and then both end up crying at the sad ones, and I pretend I never cried. And thanks for putting up with me in Scrabble, even though I steal your words by adding an “S.” I will never stop but I still end up losing anyways. 😌 It’s not much, just movies and Scrabble, but hanging out with you never feels boring.</p>
+                <p>I know you’re busy, so I really appreciate you making time to hang out with me. Those nights are honestly some of my favorites.</p>
+                <p>I’m grateful for your humor, your friendship, and the way you make ordinary evenings feel like something to look forward to.</p>
+                <p>I hope your birthday is full of good food, good movies, and a lot of cats. 🐱</p>
+                <p>Happy birthday! Here’s to many more game nights and movie marathons.</p>
+                <p>Your friend, always,<br />Nhicco</p>
               </div>
             </div>
           </div>
-        </div>
+        </button>
         <p class="open-hint" id="openHint">Open the envelope</p>
         <button class="reset-button" id="resetButton" type="button" hidden>
           Replay the reveal

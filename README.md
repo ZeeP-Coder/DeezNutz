@@ -37,3 +37,14 @@ On startup the server creates the `users` table and seeds the demo account if it
 6. Deploy. Render provides the public URL after the build completes.
 
 The server reads Render's `PORT` automatically. Keep the database private and use the internal URL when both services live in Render.
+
+### Birthday login
+
+The home route is a single-account login page. Set these environment variables in Render to choose the credentials:
+
+```env
+LOGIN_USERNAME=kyren
+LOGIN_PASSWORD=marble-orbit-583!
+```
+
+If they are not set, local development defaults to the values above. Successful login opens `/landing`; the letter remains at `/letter`.
