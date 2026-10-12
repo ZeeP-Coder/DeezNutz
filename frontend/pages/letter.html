@@ -40,7 +40,14 @@
       </div>
 
       <div class="envelope-stage" aria-live="polite">
-        <div class="envelope" id="envelope">
+        <div
+          class="envelope"
+          id="envelope"
+          role="button"
+          tabindex="0"
+          aria-label="Open the birthday envelope"
+          aria-expanded="false"
+        >
           <div class="envelope-shadow"></div>
           <div class="envelope-top"></div>
           <div class="envelope-left"></div>
@@ -57,6 +64,10 @@
             </div>
           </div>
         </div>
+        <p class="open-hint" id="openHint">Open the envelope</p>
+        <button class="reset-button" id="resetButton" type="button" hidden>
+          Replay the reveal
+        </button>
       </div>
     </div>
 
