@@ -31,6 +31,9 @@ const playOpenSound = () => {
 const openEnvelope = () => {
   if (envelope.classList.contains('is-open')) return;
 
+  if (window.startAmbientSound) {
+    window.startAmbientSound();
+  }
   playOpenSound();
   envelope.classList.add('is-open');
   envelope.setAttribute('aria-expanded', 'true');

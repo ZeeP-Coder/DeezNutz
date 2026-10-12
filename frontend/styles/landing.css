@@ -39,6 +39,34 @@ button {
   font: inherit;
 }
 
+.ambient-button {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+  z-index: 20;
+  border: 1px solid rgba(37, 94, 168, 0.22);
+  border-radius: 999px;
+  padding: 8px 14px;
+  color: var(--sky-700);
+  background: rgba(248, 251, 255, 0.78);
+  box-shadow: 0 8px 20px rgba(40, 83, 132, 0.14);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.ambient-button:hover,
+.ambient-button:focus-visible {
+  background: var(--white);
+  transform: translateY(-2px);
+}
+
+.ambient-button:focus-visible {
+  outline: 3px solid rgba(37, 94, 168, 0.3);
+  outline-offset: 3px;
+}
+
 .page-shell {
   position: relative;
   height: 100%;
@@ -490,6 +518,11 @@ h1 {
   .page-shell {
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  .ambient-button {
+    top: 12px;
+    right: 12px;
   }
 
   .envelope-card {

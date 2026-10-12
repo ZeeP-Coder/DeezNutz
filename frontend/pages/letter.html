@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Birthday Letter</title>
+    <title>A Little Note</title>
     <meta
       name="description"
-      content="A slow animated birthday letter reveal."
+      content="A slow animated note reveal."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,6 +18,9 @@
   </head>
   <body class="page-enter">
     <div class="scene">
+      <button class="ambient-button" id="ambientButton" type="button" aria-pressed="false">
+        Sound: Off
+      </button>
       <div class="glow glow-one"></div>
       <div class="glow glow-two"></div>
       <div class="confetti-layer" aria-hidden="true">
@@ -63,7 +66,9 @@
               <div class="letter-message">
                 <p><strong>Happy Birthday MY GOAT! 🎉</strong></p>
                 <p>I wanted to write you something real, because you deserve more than a quick “HBD” text.</p>
-                <p>Looking back, some of my favorite moments with you are the simple ones: movie nights, I love laughing with you during movies, even when it’s at the wrong moments and then both end up crying at the sad ones, and I pretend I never cried. And thanks for putting up with me in Scrabble, even though I steal your words by adding an “S.” I will never stop but I still end up losing anyways. 😌 It’s not much, just movies and Scrabble, but hanging out with you never feels boring.</p>
+                <p>Looking back, some of my favorite moments with you are the simple ones: movie nights, I love laughing with you during movies, even when it’s at the wrong moments and then both end up crying at the sad ones, and I pretend I never cried.</p>
+                <p>And thanks for putting up with me in Scrabble, even though I steal your words by adding an “S.” I will never stop but I still end up losing anyways. 😌</p>
+                <p>It’s not much, just movies and Scrabble, but hanging out with you never feels boring.</p>
                 <p>I know you’re busy, so I really appreciate you making time to hang out with me. Those nights are honestly some of my favorites.</p>
                 <p>I’m grateful for your humor, your friendship, and the way you make ordinary evenings feel like something to look forward to.</p>
                 <p>I hope your birthday is full of good food, good movies, and a lot of cats. 🐱</p>
@@ -80,6 +85,7 @@
       </div>
     </div>
 
+    <script src="../scripts/ambient.js"></script>
     <script src="../scripts/letter.js"></script>
   </body>
 </html>

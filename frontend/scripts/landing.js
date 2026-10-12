@@ -26,6 +26,9 @@ const playTransitionSound = () => {
 const beginReveal = () => {
   if (!envelopeCard) return;
 
+  if (window.startAmbientSound) {
+    window.startAmbientSound();
+  }
   playTransitionSound();
   envelopeCard.classList.add('is-transitioning');
   document.body.classList.add('is-leaving');

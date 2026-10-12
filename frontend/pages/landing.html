@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Birthday Surprise</title>
+    <title>A Little Something</title>
     <meta
       name="description"
-      content="A goofy, blue birthday envelope surprise for the coolest girl ever."
+      content="A little blue note made just for you."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,6 +18,9 @@
   </head>
   <body class="page-enter">
     <div class="page-shell">
+      <button class="ambient-button" id="ambientButton" type="button" aria-pressed="false">
+        Sound: Off
+      </button>
       <div class="bubble bubble-one"></div>
       <div class="bubble bubble-two"></div>
       <div class="bubble bubble-three"></div>
@@ -51,6 +54,7 @@
       </main>
     </div>
 
+    <script src="../scripts/ambient.js"></script>
     <script src="../scripts/landing.js"></script>
   </body>
 </html>
